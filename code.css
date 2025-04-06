@@ -1,0 +1,293 @@
+/* Estilos Generales - Pastel Pink & Purple Theme */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap'); /* Fuente más moderna */
+
+body {
+    font-family: 'Poppins', sans-serif; /* Nueva fuente */
+    line-height: 1.7; /* Un poco más de espacio */
+    margin: 0;
+    padding: 25px 15px; /* Más padding vertical */
+    /* Fondo degradado suave */
+    background: linear-gradient(135deg, #fce4ec, #e1bee7); /* Rosado pastel a Morado pastel */
+    color: #4a4a4a; /* Gris oscuro para texto principal */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
+.quiz-container {
+    background-color: #ffffff;
+    padding: 35px 45px; /* Más padding interno */
+    border-radius: 15px; /* Bordes más redondeados */
+    box-shadow: 0 8px 25px rgba(128, 90, 213, 0.15); /* Sombra suave morada */
+    width: 100%;
+    max-width: 850px;
+    box-sizing: border-box;
+}
+
+/* Títulos y Párrafos */
+h1 {
+    color: #ab47bc; /* Morado medio */
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 2.2em; /* Un poco más grande */
+    font-weight: 700;
+}
+
+h2 {
+    color: #ec407a; /* Rosado medio-intenso */
+    border-bottom: 3px solid #f8bbd0; /* Borde rosado pastel */
+    padding-bottom: 10px;
+    margin-top: 35px;
+    margin-bottom: 25px;
+    font-size: 1.6em; /* Más grande */
+    font-weight: 600;
+}
+
+.emoji-header, .emoji-section {
+    display: inline-block; /* Para que no afecte el flujo */
+    margin-left: 8px;
+}
+
+p {
+    margin-bottom: 12px;
+    font-size: 1.05em; /* Ligeramente más grande */
+}
+
+/* Instrucciones */
+p.instructions, .instructions.submit-instructions {
+    background-color: #f3e5f5; /* Morado muy claro */
+    border-left: 6px solid #ce93d8; /* Morado pastel medio */
+    padding: 18px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    font-size: 1em;
+    color: #6a1b9a; /* Morado oscuro para texto */
+}
+
+.instructions.submit-instructions {
+     background-color: #fff0f5; /* Rosa muy claro */
+     border-left-color: #f48fb1; /* Rosado pastel medio */
+     color: #ad1457; /* Rosa oscuro para texto */
+}
+.submit-instructions ol {
+    padding-left: 25px;
+    margin-top: 10px;
+}
+.submit-instructions li {
+    margin-bottom: 8px;
+}
+
+
+/* Formularios y Preguntas */
+.form-group {
+    margin-bottom: 30px;
+}
+
+.form-group label {
+    font-weight: 600; /* Semi-bold */
+    display: block;
+    margin-bottom: 10px;
+    color: #8e24aa; /* Morado */
+    font-size: 1.1em;
+}
+
+.form-group input[type="text"] {
+    width: calc(100% - 24px);
+    padding: 12px; /* Más padding */
+    border: 1px solid #e1bee7; /* Borde morado pastel */
+    border-radius: 8px;
+    font-size: 1em;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input[type="text"]:focus {
+    border-color: #ab47bc; /* Morado medio al enfocar */
+    box-shadow: 0 0 8px rgba(171, 71, 188, 0.2); /* Sombra suave morada */
+    outline: none;
+}
+
+.question {
+    background-color: #fff8fd; /* Blanco con tinte rosado muy suave */
+    padding: 18px 25px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+    border: 1px solid #fce4ec; /* Borde rosado pastel */
+}
+
+.question p strong {
+    color: #5d5d5d; /* Gris un poco más oscuro para la pregunta */
+    font-weight: 600;
+    font-size: 1.1em; /* Un poco más grande */
+}
+
+.question label {
+    display: block;
+    margin-bottom: 10px; /* Más espacio entre opciones */
+    font-weight: 400; /* Normal */
+    cursor: pointer;
+    color: #4a4a4a;
+    transition: color 0.2s ease;
+    padding-left: 5px; /* Espacio antes del radio */
+}
+
+.question label:hover {
+    color: #ec407a; /* Rosado al pasar el mouse */
+}
+
+.question input[type="radio"] {
+    margin-right: 10px;
+    cursor: pointer;
+    accent-color: #ce93d8; /* Color del radio button (morado pastel) */
+    transform: scale(1.1); /* Ligeramente más grande */
+}
+
+.question select {
+    width: 100%;
+    padding: 12px; /* Más padding */
+    margin-top: 8px;
+    border: 1px solid #e1bee7; /* Borde morado pastel */
+    border-radius: 8px;
+    background-color: white;
+    font-size: 1em;
+    cursor: pointer;
+    color: #4a4a4a;
+     transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.question select:focus {
+     border-color: #ab47bc;
+     box-shadow: 0 0 8px rgba(171, 71, 188, 0.2);
+     outline: none;
+}
+
+/* Botón */
+button[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 15px 25px; /* Más padding */
+    /* Gradiente morado-rosado */
+    background: linear-gradient(135deg, #ce93d8, #f48fb1);
+    color: white;
+    border: none;
+    border-radius: 10px; /* Más redondeado */
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 35px;
+    transition: all 0.3s ease; /* Transición más suave */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    letter-spacing: 0.5px; /* Espacio entre letras */
+}
+
+button[type="submit"]:hover {
+     /* Gradiente invertido o más intenso al pasar el mouse */
+    background: linear-gradient(135deg, #ab47bc, #ec407a);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px); /* Ligero levantamiento */
+}
+
+button[type="submit"]:active {
+    transform: translateY(1px) scale(0.99); /* Efecto al presionar */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+/* Resultados */
+.results {
+    margin-top: 35px;
+    padding: 25px; /* Más padding */
+    background-color: #ede7f6; /* Lavanda muy claro */
+    border: 1px solid #d1c4e9; /* Borde lavanda */
+    border-radius: 12px; /* Más redondeado */
+    text-align: center;
+    display: none;
+    color: #5e35b1; /* Morado oscuro para texto */
+}
+
+.results h2 {
+    color: #5e35b1;
+    border-bottom: none;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+}
+
+.results p {
+    margin-bottom: 10px;
+    font-size: 1.15em;
+}
+
+.results strong {
+    color: #4527a0; /* Morado más intenso */
+    font-weight: 600;
+}
+
+.results .score-correct {
+    color: #388e3c; /* Verde para correcto */
+    font-weight: bold;
+}
+.results .score-incorrect {
+    color: #d32f2f; /* Rojo para incorrecto */
+    font-weight: bold;
+}
+.results .final-grade {
+    font-size: 1.5em; /* Nota más grande */
+    font-weight: 700; /* Bold */
+    margin-top: 20px;
+    color: #4527a0; /* Morado más intenso */
+}
+.results hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(94, 53, 177, 0), rgba(94, 53, 177, 0.75), rgba(94, 53, 177, 0)); /* Línea degradada */
+    margin: 20px 0;
+}
+.results small {
+    font-size: 0.9em;
+    color: #6a1b9a;
+}
+
+
+/* Responsividad */
+@media (max-width: 700px) {
+     .quiz-container {
+        padding: 25px 20px;
+    }
+    h1 {
+        font-size: 1.8em;
+    }
+    h2 {
+        font-size: 1.4em;
+    }
+     p {
+        font-size: 1em;
+    }
+    .form-group input[type="text"] {
+         width: calc(100% - 24px);
+    }
+    .question {
+        padding: 15px 20px;
+    }
+    button[type="submit"] {
+        font-size: 1.1em;
+        padding: 12px 20px;
+    }
+     .results p {
+        font-size: 1.05em;
+    }
+     .results .final-grade {
+        font-size: 1.3em;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 { font-size: 1.6em; }
+    h2 { font-size: 1.2em; }
+    .quiz-container { padding: 20px 15px; }
+    .question { padding: 12px 15px; }
+     .question p strong { font-size: 1em; }
+     .question label { font-size: 0.95em; }
+     .form-group label { font-size: 1em; }
+     button[type="submit"] { font-size: 1em; padding: 10px 15px; }
+     .results h2 { font-size: 1.5em; }
+     .results p { font-size: 1em; }
+     .results .final-grade { font-size: 1.2em; }
+}

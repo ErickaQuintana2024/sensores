@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="es-SV">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Interactivo: Sensores Robóticos</title>
+    <link rel="stylesheet" href="style.css"> {/* <- Enlaza al nuevo CSS */}
+</head>
+<body>
+    <div class="quiz-container">
+        <h1>Quiz: Sensores - Los Sentidos del Robot <span class="emoji-header">🌸👾</span></h1> {/* Añadido emoji */}
+        <p class="instructions">¡Hey! ✨ Pon a prueba lo que aprendiste sobre los sensores en robótica. Escribe tu nombre, responde todo y dale clic a "Finalizar Quiz". ¡Suerte! 🍀</p>
+
+        <div class="form-group">
+            <label for="nombreEstudianteQuiz">Nombre Completo:</label>
+            <input type="text" id="nombreEstudianteQuiz" name="nombreEstudianteQuiz" placeholder="Tu nombre va aquí..." required>
+        </div>
+
+        <form id="quizForm">
+            {/* --- Sección 1: Selección Múltiple --- */}
+            <h2>Parte 1: Selección Múltiple <span class="emoji-section">🖱️</span></h2>
+            <div class="question">
+                <p><strong>1. ¿Cuál es la función principal de un sensor en un robot?</strong></p>
+                <label><input type="radio" name="q1" value="a" required> Ejecutar movimientos.</label>
+                <label><input type="radio" name="q1" value="b"> Almacenar energía.</label>
+                <label><input type="radio" name="q1" value="c"> Percibir información del entorno.</label> {/* Correcta */}
+                <label><input type="radio" name="q1" value="d"> Procesar algoritmos complejos.</label>
+            </div>
+            <div class="question">
+                <p><strong>2. ¿Qué tipo de sensor es más adecuado para medir la distancia a un objeto sin tocarlo?</strong></p>
+                <label><input type="radio" name="q2" value="a" required> Sensor de Contacto.</label>
+                <label><input type="radio" name="q2" value="b"> Sensor Ultrasónico.</label> {/* Correcta */}
+                <label><input type="radio" name="q2" value="c"> Sensor de Luz.</label>
+                <label><input type="radio" name="q2" value="d"> Acelerómetro.</label>
+            </div>
+             <div class="question">
+                <p><strong>3. Un sensor que detecta si el robot ha chocado físicamente con algo es un:</strong></p>
+                <label><input type="radio" name="q3" value="a" required> Sensor Infrarrojo.</label>
+                <label><input type="radio" name="q3" value="b"> Sensor de Color.</label>
+                <label><input type="radio" name="q3" value="c"> Sensor de Contacto (Táctil/Bumper).</label> {/* Correcta */}
+                <label><input type="radio" name="q3" value="d"> Giroscopio.</label>
+            </div>
+             <div class="question">
+                <p><strong>4. ¿Qué mide principalmente un sensor de color como el del LEGO Mindstorms EV3?</strong></p>
+                <label><input type="radio" name="q4" value="a" required> La temperatura ambiente.</label>
+                <label><input type="radio" name="q4" value="b"> La intensidad de la luz reflejada y el color.</label> {/* Correcta */}
+                <label><input type="radio" name="q4" value="c"> La velocidad de rotación.</label>
+                <label><input type="radio" name="q4" value="d"> La presión ejercida.</label>
+            </div>
+            <div class="question">
+                <p><strong>5. ¿Para qué se usa comúnmente un sensor Infrarrojo (IR) en robots móviles simples?</strong></p>
+                <label><input type="radio" name="q5" value="a" required> Para medir la humedad.</label>
+                <label><input type="radio" name="q5" value="b"> Para detectar sonidos fuertes.</label>
+                <label><input type="radio" name="q5" value="c"> Para seguir líneas negras sobre fondo blanco (o viceversa).</label> {/* Correcta */}
+                <label><input type="radio" name="q5" value="d"> Para medir la altitud.</label>
+            </div>
+
+            {/* --- Sección 2: Verdadero/Falso --- */}
+            <h2>Parte 2: Verdadero o Falso <span class="emoji-section">✅❌</span></h2>
+             <div class="question">
+                <p><strong>6. Los sensores son considerados dispositivos de salida en un sistema robótico.</strong></p>
+                <label><input type="radio" name="q6" value="verdadero" required> Verdadero</label>
+                <label><input type="radio" name="q6" value="falso"> Falso</label> {/* Correcta (son de entrada) */}
+            </div>
+            <div class="question">
+                <p><strong>7. Un sensor ultrasónico funciona emitiendo ondas de luz para medir la distancia.</strong></p>
+                <label><input type="radio" name="q7" value="verdadero" required> Verdadero</label>
+                <label><input type="radio" name="q7" value="falso"> Falso</label> {/* Correcta (emite ondas de sonido/ultrasonido) */}
+            </div>
+             <div class="question">
+                <p><strong>8. Los sensores analógicos dan una señal que puede tener muchos valores diferentes en un rango.</strong></p> {/* Redacción más simple */}
+                <label><input type="radio" name="q8" value="verdadero" required> Verdadero</label> {/* Correcta */}
+                <label><input type="radio" name="q8" value="falso"> Falso</label>
+            </div>
+             <div class="question">
+                <p><strong>9. El giroscopio es un sensor que mide cuánta luz hay.</strong></p> {/* Redacción más simple */}
+                <label><input type="radio" name="q9" value="verdadero" required> Verdadero</label>
+                <label><input type="radio" name="q9" value="falso"> Falso</label> {/* Correcta (mide velocidad angular/orientación) */}
+            </div>
+            <div class="question">
+                <p><strong>10. Con Arduino podemos usar muchos tipos de sensores diferentes conectándolos por fuera.</strong></p> {/* Redacción más simple */}
+                <label><input type="radio" name="q10" value="verdadero" required> Verdadero</label> {/* Correcta */}
+                <label><input type="radio" name="q10" value="falso"> Falso</label>
+            </div>
+
+            {/* --- Sección 3: Relacionar Conceptos --- */}
+            <h2>Parte 3: Relacionar Conceptos <span class="emoji-section">🔗</span></h2>
+            <div class="question relation-question">
+                <label for="q11"><strong>11. Sensor de Contacto:</strong> ¿Para qué sirve principalmente?</label> {/* Pregunta más directa */}
+                <select id="q11" name="q11" required>
+                    <option value="">Elige la mejor opción...</option>
+                    <option value="a">Saber qué tan rápido gira algo.</option>
+                    <option value="b">Detectar si chocó con algo.</option> {/* Correcta */}
+                    <option value="c">Medir distancia con sonido.</option>
+                    <option value="d">Ver de qué color es algo.</option>
+                </select>
+            </div>
+            <div class="question relation-question">
+                <label for="q12"><strong>12. Sensor Ultrasónico:</strong> ¿Cómo funciona básicamente?</label> {/* Pregunta más directa */}
+                 <select id="q12" name="q12" required>
+                    <option value="">Elige la mejor opción...</option>
+                    <option value="a">Usa luz infrarroja que rebota.</option>
+                    <option value="b">Cambia su resistencia con la luz.</option>
+                    <option value="c">Manda y recibe sonidos muy agudos.</option> {/* Correcta */}
+                    <option value="d">Siente cuando lo presionan.</option>
+                </select>
+            </div>
+             <div class="question relation-question">
+                <label for="q13"><strong>13. Sensor de Color:</strong> ¿En qué tarea ayudaría a un robot?</label> {/* Pregunta más directa */}
+                 <select id="q13" name="q13" required>
+                    <option value="">Elige la mejor opción...</option>
+                    <option value="a">Saber si está inclinado.</option>
+                    <option value="b">Separar objetos por su color.</option> {/* Correcta */}
+                    <option value="c">No caerse por las gradas.</option>
+                    <option value="d">Detectar si hay gas cerca.</option>
+                </select>
+            </div>
+             <div class="question relation-question">
+                 <label for="q14"><strong>14. Giroscopio:</strong> ¿Qué tipo de información mide?</label> {/* Pregunta más directa */}
+                 <select id="q14" name="q14" required>
+                    <option value="">Elige la mejor opción...</option>
+                    <option value="a">La temperatura.</option>
+                    <option value="b">La distancia a un objeto.</option>
+                    <option value="c">Qué tan rápido gira o cambia de posición.</option> {/* Correcta */}
+                    <option value="d">Cuánta luz hay.</option>
+                </select>
+            </div>
+            <div class="question relation-question">
+                <label for="q15"><strong>15. Sensor Infrarrojo (Seguidor):</strong> ¿Para qué lo usaría un robot que se mueve?</label> {/* Pregunta más directa */}
+                 <select id="q15" name="q15" required>
+                    <option value="">Elige la mejor opción...</option>
+                    <option value="a">Detectar cosas transparentes.</option>
+                    <option value="b">Seguir una línea pintada en el piso.</option> {/* Correcta */}
+                    <option value="c">Medir la humedad.</option>
+                    <option value="d">Reconocer huellas.</option>
+                </select>
+            </div>
+
+             {/* --- Sección 4: Relacionar Características y Kits --- */}
+            <h2>Parte 4: Relacionar Características y Kits <span class="emoji-section">🛠️</span></h2>
+             <div class="question relation-question">
+                <label for="q16"><strong>16. Sensor Ultrasónico HC-SR04:</strong> ¿Con qué kit lo conectamos mucho en clase?</label>
+                 <select id="q16" name="q16" required>
+                    <option value="">Elige la mejor opción...</option>
+                    <option value="a">Con K'NEX.</option>
+                    <option value="b">Viene dentro del LEGO EV3.</option>
+                    <option value="c">Con Arduino (como pieza extra).</option> {/* Correcta */}
+                    <option value="d">Con Makeblock (pero es otro modelo).</option>
+                </select>
+            </div>
+            <div class="question relation-question">
+                 <label for="q17"><strong>17. Sensor Táctil (Bumper):</strong> ¿Qué lo caracteriza?</label>
+                 <select id="q17" name="q17" required>
+                    <option value="">Elige la mejor opción...</option>
+                    <option value="a">Mide distancia sin tocar.</option>
+                    <option value="b">Necesita que lo presionen para funcionar.</option> {/* Correcta */}
+                    <option value="c">Detecta colores.</option>
+                    <option value="d">Mide giros.</option>
+                </select>
+            </div>
+             <div class="question relation-question">
+                <label for="q18"><strong>18. LEGO Mindstorms EV3:</strong> ¿Qué sensor trae para ver colores y luz?</label>
+                 <select id="q18" name="q18" required>
+                    <option value="">Elige la mejor opción...</option>
+                    <option value="a">Sensor Ultrasónico.</option>
+                    <option value="b">Sensor de Color.</option> {/* Correcta */}
+                    <option value="c">Sensor de Temperatura.</option>
+                    <option value="d">Sensor de Sonido.</option>
+                </select>
+            </div>
+             <div class="question relation-question">
+                <label for="q19"><strong>19. Makeblock Ultimate:</strong> ¿Qué sensor usa para seguir líneas?</label>
+                 <select id="q19" name="q19" required>
+                    <option value="">Elige la mejor opción...</option>
+                    <option value="a">Un sensor de contacto.</option>
+                    <option value="b">Un sensor de gas.</option>
+                    <option value="c">Un sensor seguidor de línea (con IR).</option> {/* Correcta */}
+                    <option value="d">Un giroscopio.</option>
+                </select>
+            </div>
+            <div class="question relation-question">
+                <label for="q20"><strong>20. Sensor Digital:</strong> ¿Qué tipo de señal da?</label>
+                 <select id="q20" name="q20" required>
+                    <option value="">Elige la mejor opción...</option>
+                    <option value="a">Un voltaje que cambia poco a poco.</option>
+                    <option value="b">Solo dos valores (como Prendido/Apagado o 0/1).</option> {/* Correcta */}
+                    <option value="c">La temperatura exacta.</option>
+                    <option value="d">Una onda de sonido.</option>
+                </select>
+            </div>
+
+            {/* --- Botón Finalizar --- */}
+            <button type="submit">Finalizar Quiz y Ver Resultados</button>
+        </form>
+
+        {/* --- Sección de Resultados (inicialmente oculta) --- */}
+        <div id="resultadoQuiz" class="results">
+            {/* Los resultados del quiz se mostrarán aquí vía JS */}
+        </div>
+
+        {/* --- Instrucciones Finales --- */}
+         <div class="instructions submit-instructions">
+            <strong>¡Ya casi! Instrucciones Finales:</strong> 📸➡️💻
+            <ol>
+                <li>¡Revisa que tu nombre esté bien escrito arriba!</li>
+                <li>Asegúrate de haber contestado TODO.</li>
+                <li>Si ya le diste al botón de finalizar, ¡genial!</li>
+                <li>Toma una <strong>captura de pantalla</strong> que se vea clarita: tu <strong>nombre</strong>, los <strong>aciertos</strong> y la <strong>nota final</strong>.</li>
+                <li>Sube esa captura a la tarea de <strong>Google Classroom (Ciencias de la Computación)</strong>. ¡Y listo! 🎉</li>
+            </ol>
+        </div>
+    </div>
+
+    {/* --- Script (sin cambios) --- */}
+    <script src="script.js"></script>
+</body>
+</html>
