@@ -37,6 +37,8 @@ document.getElementById('quizForm').addEventListener('submit', function(event) {
 
     // --- Evaluar Respuestas ---
     let todasRespondidas = true; // Flag para verificar si todo está respondido
+    console.log("--- Iniciando verificación de respuestas ---"); // Mensaje de inicio
+
     for (let i = 1; i <= totalPreguntas; i++) {
         const preguntaId = 'q' + i;
         const radios = document.getElementsByName(preguntaId);
@@ -50,40 +52,52 @@ document.getElementById('quizForm').addEventListener('submit', function(event) {
                     break;
                 }
             }
+            // console.log(`Pregunta ${preguntaId} (radio): respondida con ${respuestaUsuario}`); // Log opcional para ver qué se seleccionó
         } else if (select) { // Si es de Relación (Select)
             respuestaUsuario = select.value;
+             // console.log(`Pregunta ${preguntaId} (select): valor seleccionado ${respuestaUsuario}`); // Log opcional para ver qué se seleccionó
              // Para selects, la opción por defecto "" indica no respondido
              if (respuestaUsuario === "") {
                  respuestaUsuario = null; // Marcar como no respondido
              }
+        } else {
+            console.warn(`Elemento no encontrado para ${preguntaId}`); // Aviso si no encuentra ni radio ni select
+            respuestaUsuario = null; // Marcar como no respondido si no se encuentra el elemento
         }
 
          // Verificar si se respondió
          if (respuestaUsuario === null) {
+             // ****** LÍNEA DE DEPURACIÓN AÑADIDA ******
+             console.error("Pregunta marcada como NO respondida:", preguntaId);
+             // ******************************************
              todasRespondidas = false;
              // Opcional: Podrías marcar visualmente la pregunta no respondida aquí
-             // document.getElementById(preguntaId).closest('.question').style.border = '2px solid red'; // Ejemplo
+             // document.getElementById(preguntaId)?.closest('.question')?.style.border = '2px solid red'; // Ejemplo con optional chaining
          } else {
             // Comparar respuesta si fue respondida
             if (respuestaUsuario === respuestasCorrectas[preguntaId]) {
                 puntaje += valorPorPregunta;
             }
              // Opcional: Resetear borde si previamente marcado
-             // if (select) document.getElementById(preguntaId).closest('.question').style.border = '1px solid #fce4ec';
-             // else if (radios.length > 0) radios[0].closest('.question').style.border = '1px solid #fce4ec';
+             // const questionElement = document.getElementById(preguntaId)?.closest('.question');
+             // if(questionElement) questionElement.style.border = ''; // Resetear borde
          }
     }
+
+    console.log("--- Verificación de respuestas terminada ---"); // Mensaje de fin
+    console.log("¿Todas respondidas?:", todasRespondidas); // Mostrar el estado del flag
 
     // Si no todas fueron respondidas, mostrar alerta y detener
     if (!todasRespondidas) {
         alert(`¡Ups! Parece que olvidaste responder una o más preguntas. Por favor, completa todo el quiz.`);
+        console.log("Ejecución detenida por preguntas sin responder."); // Mensaje final en consola
         return;
     }
-
 
     // --- Calcular Nota Final ---
     const notaFinal = puntaje;
     const aciertos = Math.round(puntaje / valorPorPregunta); // Calcular aciertos
+    console.log(`Calculando nota: Aciertos=${aciertos}, Puntaje=${puntaje}, Nota=${notaFinal}`); // Log de cálculo
 
     // --- Mostrar Resultados ---
     const resultadoDiv = document.getElementById('resultadoQuiz');
@@ -96,7 +110,10 @@ document.getElementById('quizForm').addEventListener('submit', function(event) {
         <p><small>¡Buen trabajo! No olvides tomar captura y enviarla a Google Classroom.</small> ✨</p>
     `;
     resultadoDiv.style.display = 'block'; // Mostrar el div de resultados
+    console.log("Resultados mostrados en la página."); // Log final
 
     // Opcional: Desplazar la vista a los resultados
     resultadoDiv.scrollIntoView({ behavior: 'smooth' });
 });
+
+console.log("Script de quiz cargado y listener añadido."); // Mensaje al cargar el script
